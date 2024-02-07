@@ -2,7 +2,7 @@ package Assignment_2_Number_System_and_Data_Types;
 
 import java.util.Scanner;
 
-public class P_Inverse_of_Number {
+public class P_8_Inverse_of_Number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
