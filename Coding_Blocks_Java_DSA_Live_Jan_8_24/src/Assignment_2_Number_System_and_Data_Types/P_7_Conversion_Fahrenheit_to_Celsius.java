@@ -1,4 +1,4 @@
-package Assignment_1_Pattern;
+package Assignment_2_Number_System_and_Data_Types;
 
 import java.util.Scanner;
 
