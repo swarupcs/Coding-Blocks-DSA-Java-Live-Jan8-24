@@ -11,13 +11,14 @@ public class P_13_Print_Series {
 		int n2 = sc.nextInt();
 		int count = 0;
 		int i = 1;
-		while(count<=n1) {
+		while(count<n1) {
 			int term = 3*i+2;
 			i++;
 			if(term % n2 != 0) {
-				System.out.println(term);		
+				System.out.println(term);
+				count++;
 			}
-			count++;
+			
 		}
 
 	}
