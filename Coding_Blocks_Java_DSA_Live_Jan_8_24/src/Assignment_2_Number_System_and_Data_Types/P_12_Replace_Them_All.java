@@ -7,11 +7,15 @@ public class P_12_Replace_Them_All {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		long num = sc.nextInt();
+		long num = sc.nextLong();
 		long each_digit = 0;
 		long number = 0;
 		long ans = 0;
 		long i = 0;
+		if(num==0) {
+			System.out.println(5);
+			return;
+		}
 		
 		while(num != 0) {
 			each_digit = num % 10;
