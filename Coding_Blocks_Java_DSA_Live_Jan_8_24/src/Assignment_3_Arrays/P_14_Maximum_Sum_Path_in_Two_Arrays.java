@@ -2,7 +2,7 @@ package Assignment_3_Arrays;
 
 import java.util.Scanner;
 
-public class Maximum_Sum_Path_in_Two_Arrays {
+public class P_14_Maximum_Sum_Path_in_Two_Arrays {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
