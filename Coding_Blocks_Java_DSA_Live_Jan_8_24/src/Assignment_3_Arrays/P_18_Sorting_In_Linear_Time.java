@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class P_18_Sorting_In_Linear_Time {
 
-	public class Main {
 	    public static void main(String args[]) {
 	        Scanner scn = new Scanner(System.in);
 	        int n = scn.nextInt();
