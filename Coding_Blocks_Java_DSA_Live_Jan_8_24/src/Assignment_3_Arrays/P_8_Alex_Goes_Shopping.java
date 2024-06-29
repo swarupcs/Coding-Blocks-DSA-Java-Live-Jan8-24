@@ -6,50 +6,36 @@ import java.util.Scanner;
 public class P_8_Alex_Goes_Shopping {
 
 	public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int t = scanner.nextInt(); // Number of test cases
-        for (int i = 0; i < t; i++) {
-            int n = scanner.nextInt(); // Number of items in the shop
-            int[] prices = new int[n];
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] price = new int[n];
+		for (int i = 0; i < price.length; i++) {
+			price[i] = sc.nextInt();
+		}
 
-            // Input prices of items
-            for (int j = 0; j < n; j++) {
-                prices[j] = scanner.nextInt();
-            }
+		int q = sc.nextInt();
+		while (q-- != 0) {
+			int money = sc.nextInt();
+			int k = sc.nextInt();
+			ags(price, money, k);
+		}
+	}
 
-            Arrays.sort(prices); // Sort the prices to facilitate counting distinct prices
+	public static void ags(int[] price, int money, int k) {
+		// TODO Auto-generated method stub
+		int choice = 0;
+		for (int i = 0; i < price.length; i++) {
+			if (money % price[i] == 0) {
+				choice++;
+			}
+		}
 
-            int q = scanner.nextInt(); // Number of queries
-            for (int j = 0; j < q; j++) {
-                int A = scanner.nextInt(); // Alex's money
-                int k = scanner.nextInt(); // Shopkeeper's claim of having at least 'k' items
+		if (choice >= k) {
+			System.out.println("YES");
+		} else {
+			System.out.println("NO");
+		}
 
-                // Check if there are at least 'k' distinct prices that Alex can afford
-                int distinctCount = countDistinctPrices(prices, A);
-
-                // Check if the shopkeeper's claim is correct
-                if (distinctCount >= k) {
-                    System.out.println("Yes");
-                } else {
-                    System.out.println("No");
-                }
-            }
-            if (i < t - 1) {
-                System.out.println(); // Print a blank line after each test case
-            }
-        }
-    }
-
-    public static int countDistinctPrices(int[] prices, int A) {
-        int distinctCount = 0;
-        int prevPrice = -1;
-        for (int price : prices) {
-            if (price <= A && price != prevPrice) {
-                distinctCount++;
-                prevPrice = price;
-            }
-        }
-        return distinctCount;
-    }
+	}
 
 }
