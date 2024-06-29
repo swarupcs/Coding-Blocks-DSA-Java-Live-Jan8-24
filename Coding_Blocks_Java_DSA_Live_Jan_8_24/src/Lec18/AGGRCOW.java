@@ -23,34 +23,33 @@ public class AGGRCOW {
 
 	}
 
-	
 	public static int largest_Distance(int[] stall, int c) {
 		int n = stall.length;
-		int low = 0;
-		int high = stall[n-1] - stall[0];
+		int lo = 0;
+		int hi = stall[n - 1] - stall[0];
 		int ans = 0;
-		while(low <= high) {
-			int mid = (low+high)/2;
-			if(isItPossible(stall, c, mid) == true) {
+		while (lo <= hi) {
+			int mid = (lo + hi) / 2;
+			if (isitpossible(stall, c, mid) == true) {
 				ans = mid;
-				low = mid+1;
+				lo = mid + 1;
 			} else {
-				high = mid - 1;
+				hi = mid - 1;
 			}
 		}
 		return ans;
+
 	}
 
-	public static boolean isItPossible(int[] stall, int c, int mid) {
-		// TODO Auto-generated method stub
+	public static boolean isitpossible(int[] stall, int c, int mid) {
 		int cow = 1;
 		int pos = stall[0];
-		for(int i=1; i<stall.length; i++) {
-			if(stall[i] - pos >= mid) {
+		for (int i = 1; i < stall.length; i++) {
+			if (stall[i] - pos >= mid) {
 				cow++;
 				pos = stall[i];
 			}
-			if(cow == c) {
+			if (cow == c) {
 				return true;
 			}
 		}

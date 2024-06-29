@@ -2,6 +2,7 @@ package Lec34;
 
 import java.util.Stack;
 
+
 public class Java_Stack {
 
 	public static void main(String[] args) {
@@ -35,7 +36,7 @@ public class Java_Stack {
 		st1.push("RAj");
 		st1.add("Ankit");
 		System.out.println(st1);
-
+		
 	}
 
 }

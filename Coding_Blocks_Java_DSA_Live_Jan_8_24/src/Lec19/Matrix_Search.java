@@ -11,15 +11,15 @@ public class Matrix_Search {
 	}
 
 	public static boolean Search(int[][] arr, int item) {
-		int row = 0;
-		int col = arr[0].length - 1;
-		while (row < arr.length && col >= 0) {
-			if (arr[row][col] == item) {
+		int r = 0;
+		int c = arr[0].length - 1;
+		while (r < arr.length && c >= 0) {
+			if (arr[r][c] == item) {
 				return true;
-			} else if (arr[row][col] > item) {
-				col--;
+			} else if (arr[r][c] > item) {
+				c--;
 			} else {
-				row++;
+				r++;
 			}
 		}
 		return false;

@@ -32,5 +32,4 @@ public class Selection_Sort {
 		return idx;
 
 	}
-
 }

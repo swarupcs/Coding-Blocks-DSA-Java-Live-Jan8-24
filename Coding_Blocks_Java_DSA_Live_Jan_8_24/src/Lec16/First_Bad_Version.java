@@ -1,4 +1,4 @@
- package Lec16;
+package Lec16;
 
 public class First_Bad_Version {
 
@@ -7,24 +7,24 @@ public class First_Bad_Version {
 		int n = 100;
 
 	}
-	
-	public int firstBad(int n) {
-		int low = 1;
-		int high = n;
+
+	public static int firstBad(int n) {
+		int lo = 1;
+		int hi = n;
 		int ans = 0;
-		while(low<=high) {
-			int mid = low+(high - low)/2;
-			if(isBadVersion(mid) == true) {
+		while (lo <= hi) {
+			int mid = lo + (hi - lo) / 2;
+			if (isBadVersion(mid) == true) {
 				ans = mid;
-				high = mid - 1;
+				hi = mid - 1;
 			} else {
-				low = mid + 1;
+				lo = mid + 1;
 			}
 		}
-		
 		return ans;
 	}
 
+//leetcode
 	public static boolean isBadVersion(int mid) {
 		// TODO Auto-generated method stub
 		return false;

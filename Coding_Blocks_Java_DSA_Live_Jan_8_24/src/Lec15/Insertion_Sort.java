@@ -9,8 +9,9 @@ public class Insertion_Sort {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
+
 	}
-	
+
 	public static void Sort(int[] arr) {
 		// TODO Auto-generated method stub
 		for (int i = 1; i < arr.length; i++) {
@@ -28,8 +29,10 @@ public class Insertion_Sort {
 			j--;
 		}
 
-
+//		for (int j = i - 1; j >= 0 && arr[j] > item; j--) {
+//       arr[j + 1] = arr[j];
+//		arr[j] = item;
+//		}
 	}
-
 
 }
